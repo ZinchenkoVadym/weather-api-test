@@ -1,0 +1,17 @@
+.footer {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-top: 3px solid rgba(216,225,15,0.38);
+  div{
+    p {
+      color: white;
+      font-size: 12px;
+      align-items: center;
+    }
+  }
+
+}

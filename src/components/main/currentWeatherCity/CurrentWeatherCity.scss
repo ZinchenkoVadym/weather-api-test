@@ -1,0 +1,83 @@
+.current__weather {
+  position: relative;
+  z-index: -1;
+  .current-weather__container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    .current-weather__block {
+      text-align: center;
+      backdrop-filter: blur(20px);
+      border: 5px solid rgba(216, 225, 15, 0.38);
+      border-radius: 5px;
+      padding: 20px;
+
+      .location__block {
+        font-size: 38px;
+        letter-spacing: 2px;
+        color: rgba(15, 58, 83, 0.62);
+      }
+
+      .temperature__block {
+        margin-top: 20px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: rgba(15, 58, 83, 0.62);
+
+        .img{
+          width: 120px;
+          height: 120px ;
+          img{
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .temp {
+          font-size: 72px;
+          margin-left: 10px;
+        }
+
+        .celcium {
+          margin-left: 10px;
+          display: flex;
+          flex-direction: column;
+
+          button {
+            font-size: 28px;
+            border: none;
+            background: none;
+            color: rgba(15, 58, 83, 0.62);
+            cursor: pointer;
+          }
+        }
+      }
+
+      .mostly__clear {
+        margin-top: 20px;
+        font-size: 32px
+      }
+
+      .update {
+        margin: 20px 0 20px 0;
+        font-size: 28px;
+      }
+
+      .weather__parametrs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 22px;
+        width: 500px;
+        margin: 0 auto;
+
+        div {
+          margin-left: 20px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
