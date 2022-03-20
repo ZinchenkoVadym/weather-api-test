@@ -22,7 +22,7 @@ let InitialState = {
     toggleTempBool: false,
     loaderFahrenheit: false,
     loaderMain: false,
-    activeSuggestion: 0,
+    activeSuggestion: -1,
 }
 
 const weatherReducer = (state = InitialState, action) => {
@@ -199,6 +199,8 @@ export const getCityWeather = (nameCity) => {
             )
     }
 }
+
+
 
 export const getFahrenheitTemp = (nameCity) =>  {
     return (dispatch) => {

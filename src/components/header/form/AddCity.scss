@@ -5,11 +5,19 @@
     margin-right: 10px;
     cursor: pointer;
   }
-h2{
-  font-size: 18px;
-  color: rgba(15,58,83,0.62);;
+.not_found {
+  font-size: 16px;
+  color: rgba(15, 58, 83, 0.62);;
   padding: 10px;
+  opacity: 0;
+  transition: 1s;
 }
+
+  .active {
+    opacity: 1;
+
+
+  }
   input {
     font-size: 16px;
     padding: 5px 10px;
@@ -31,7 +39,6 @@ h2{
   :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:  rgba(15,58,83,0.62);
   }
-
   button {
     padding: 5px 10px;
     margin-left: 20px;
@@ -47,7 +54,6 @@ h2{
       transition: 1s;
     }
   }
-
   .autocomplete {
     position: absolute;
     top: 60px;
@@ -70,6 +76,35 @@ h2{
     }
     .active {
       background-color: rgba(216,225,15,0.38);
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .form__add-city {
+    justify-content: space-between;
+    padding-top: 10px;
+    .svg_refresh {
+      height: 20px;
+      width: 20px;
+    }
+    .not_found {
+      position: absolute;
+      left: 0;
+      top: 60px;
+      z-index: 4;
+      width: 100%;
+      border: 3px solid rgba(216,225,15,0.38);
+      border-radius: 5px;
+      background-color: #74a2b7;
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    .active {
+      opacity: 1;
+      transition: 1s;
+      transform: translateX(0);
     }
   }
 }

@@ -68,6 +68,8 @@ textarea{
   background-size: cover;
   position: relative;
   z-index: 2;
+  min-height: 100vh;
+
 }
 
 
