@@ -1,0 +1,127 @@
+.current__weather {
+  position: relative;
+  z-index: -1;
+}
+.current__weather .current-weather__container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.current__weather .current-weather__container .current-weather__block {
+  text-align: center;
+  backdrop-filter: blur(20px);
+  border: 5px solid rgba(216, 225, 15, 0.38);
+  border-radius: 5px;
+  padding: 20px;
+}
+.current__weather .current-weather__container .current-weather__block .location__block {
+  font-size: 38px;
+  letter-spacing: 2px;
+  color: rgba(15, 58, 83, 0.62);
+}
+.current__weather .current-weather__container .current-weather__block .temperature__block {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: rgba(15, 58, 83, 0.62);
+}
+.current__weather .current-weather__container .current-weather__block .temperature__block .img {
+  width: 120px;
+  height: 120px;
+}
+.current__weather .current-weather__container .current-weather__block .temperature__block .img img {
+  height: 100%;
+  width: 100%;
+}
+.current__weather .current-weather__container .current-weather__block .temperature__block .temp {
+  font-size: 72px;
+  margin-left: 10px;
+}
+.current__weather .current-weather__container .current-weather__block .temperature__block .celcium {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.current__weather .current-weather__container .current-weather__block .temperature__block .celcium button {
+  font-size: 28px;
+  border: none;
+  background: none;
+  color: rgba(15, 58, 83, 0.62);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.current__weather .current-weather__container .current-weather__block .temperature__block .celcium .active {
+  font-size: 32px;
+  transition: 0.5s;
+}
+.current__weather .current-weather__container .current-weather__block .mostly__clear {
+  margin-top: 20px;
+  font-size: 32px;
+}
+.current__weather .current-weather__container .current-weather__block .update {
+  margin: 20px 0 20px 0;
+  font-size: 28px;
+}
+.current__weather .current-weather__container .current-weather__block .weather__parametrs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 22px;
+  width: 500px;
+  margin: 0 auto;
+}
+.current__weather .current-weather__container .current-weather__block .weather__parametrs div {
+  margin-left: 20px;
+  padding: 10px;
+}
+
+@media (max-width: 730px) {
+  .current__weather .current-weather__container .current-weather__block .location__block {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: rgba(15, 58, 83, 0.62);
+  }
+  .current__weather .current-weather__container .current-weather__block .temperature__block {
+    margin-top: 0;
+  }
+  .current__weather .current-weather__container .current-weather__block .temperature__block .img {
+    width: 80px;
+    height: 80px;
+  }
+  .current__weather .current-weather__container .current-weather__block .temperature__block .temp {
+    font-size: 48px;
+    margin-left: 0;
+  }
+  .current__weather .current-weather__container .current-weather__block .temperature__block .celcium {
+    margin-left: 10px;
+  }
+  .current__weather .current-weather__container .current-weather__block .temperature__block .celcium button {
+    font-size: 18px;
+  }
+  .current__weather .current-weather__container .current-weather__block .mostly__clear {
+    margin-top: 0;
+    font-size: 22px;
+  }
+  .current__weather .current-weather__container .current-weather__block .update {
+    margin: 20px 0 20px 0;
+    font-size: 22px;
+  }
+  .current__weather .current-weather__container .current-weather__block .weather__parametrs {
+    font-size: 16px;
+    width: 400px;
+  }
+}
+@media (max-width: 730px) and (max-width: 500px) {
+  .current__weather .current-weather__container .current-weather__block .weather__parametrs {
+    width: 280px;
+  }
+}
+@media (max-width: 730px) {
+  .current__weather .current-weather__container .current-weather__block .weather__parametrs div {
+    margin-left: 20px;
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=CurrentWeatherCity.css.map */

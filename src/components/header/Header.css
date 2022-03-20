@@ -1,0 +1,31 @@
+.header {
+  backdrop-filter: blur(30px);
+  height: 80px;
+  border-bottom: 3px solid rgba(216, 225, 15, 0.38);
+}
+.header .header__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header__container h1 {
+  color: rgba(15, 58, 83, 0.62);
+  font-size: 32px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+@media (max-width: 730px) {
+  .header {
+    height: 60px;
+  }
+  .header .header__container {
+    display: block;
+  }
+  .header .header__container h1 {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */
