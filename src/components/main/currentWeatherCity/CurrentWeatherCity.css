@@ -52,7 +52,7 @@
   transition: 0.5s;
 }
 .current__weather .current-weather__container .current-weather__block .temperature__block .celcium .active {
-  font-size: 32px;
+  font-size: 30px;
   transition: 0.5s;
 }
 .current__weather .current-weather__container .current-weather__block .mostly__clear {

@@ -9,25 +9,25 @@
   width: 150px;
   padding: 10px;
 }
-.weather_list .weather_item .qwe {
+.weather_list .weather_item .weather__data {
   border: 2px solid rgba(216, 225, 15, 0.38);
   padding: 10px;
   backdrop-filter: blur(30px);
 }
-.weather_list .weather_item .qwe .img_carousel img {
+.weather_list .weather_item .weather__data .img_carousel img {
   height: 120px;
   width: 120px;
   margin: 0 auto;
 }
-.weather_list .weather_item .qwe .date {
+.weather_list .weather_item .weather__data .date {
   margin-top: 10px;
   font-size: 16px;
 }
-.weather_list .weather_item .qwe .time {
+.weather_list .weather_item .weather__data .time {
   margin: 20px 0 5px 0;
   font-size: 16px;
 }
-.weather_list .weather_item .qwe .temp {
+.weather_list .weather_item .weather__data .temp {
   margin-top: 10px;
   font-size: 48px;
 }

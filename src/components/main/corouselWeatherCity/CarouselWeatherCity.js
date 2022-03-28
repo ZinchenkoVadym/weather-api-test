@@ -1,12 +1,13 @@
 import React from 'react';
 import '../Main.css'
 import './CarouselWeatherCity.css'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 const CarouselWeatherCity = (props) => {
+
     const sliderSettings = {
         infinite: false,
         speed: 500,
@@ -27,6 +28,8 @@ const CarouselWeatherCity = (props) => {
             }
         ]
     }
+    const iconWeather = `http://openweathermap.org/img/wn/${props.carouselData[0].weather[0].icon}@2x.png`;
+
     return (
         <div className='container'>
             <div className='weather_list'>
@@ -34,30 +37,30 @@ const CarouselWeatherCity = (props) => {
                     <Slider {...sliderSettings}>
                         {props.carouselData.slice(0, 7).map(e => {
                             let date = e.dt_txt.split(' ');
-                            let time = date[1].slice(0, 5)
+                            let time = date[1].slice(0, 5);
+                            let temp = Math.ceil(e.main.temp);
                             return (
-                                <div
-                                    className='weather_item'
-                                    key={e.dt}
-                                >
-                                    <div className='qwe'>
-                                        <div className='date'>{date[0]}</div>
-                                        <div className='time'>{time}</div>
-                                        <div className='img_carousel'>
-                                            <img
-                                                src={`http://openweathermap.org/img/wn/${props.carouselData[0].weather[0].icon}@2x.png`} alt={'img'}/>
+                                <div className='weather_item' key={e.dt}>
+                                     <div className='weather__data'>
+                                        <div className='date'>
+                                            {date[0]}
                                         </div>
-                                        <div className='temp'>{Math.ceil(e.main.temp)}&deg;c</div>
+                                        <div className='time'>
+                                            {time}
+                                        </div>
+                                        <div className='img_carousel'>
+                                            <img src={iconWeather} alt={'img'}/>
+                                        </div>
+                                        <div className='temp'>
+                                            {temp}&deg;c
+                                        </div>
                                     </div>
                                 </div>
-                            )
-                        })}
+                            )})}
                     </Slider>
                 </div>
             </div>
         </div>
-
-
     );
 };
 
