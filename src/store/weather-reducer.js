@@ -158,6 +158,27 @@ export const getCityWeather = (nameCity) => {
     }
 }
 
+export const getCityWeatherGeolocation = (lat, lon) => {
+    return (dispatch) => {
+        console.log('request')
+        dispatch(loaderToggleMain(true))
+        weatherApiRequest.getCityWeatherGeolocation(lat, lon)
+            .then(result => {
+                if (result.cod === '404' || result.cod === '400') {throw new Error('message')}
+                dispatch(cityData(result.city))
+                dispatch(weatherData(result.list))
+                dispatch(changeCity(    ''))
+                dispatch(loaderToggleMain(false))
+                dispatch(toggleTemp(false))
+            })
+            .catch(e => {
+                    dispatch(loaderToggleMain(false))
+                    dispatch(cityNotFound(true))
+                }
+            )
+    }
+}
+
 export const getFahrenheitTemp = (nameCity) => {
     return (dispatch) => {
         dispatch(loaderToggleFahrenheit(true))

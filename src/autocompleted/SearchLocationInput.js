@@ -29,6 +29,7 @@ export const handleScriptLoad = (changeCity, autoCompleteRef) => {
 }
 
 async function handlePlaceSelect(changeCity) {
+    console.log('handlePlaceSelect')
     const addressObject = autoComplete.getPlace();
     const query = addressObject.formatted_address;
     changeCity(query);

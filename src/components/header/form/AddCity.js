@@ -3,6 +3,7 @@ import './../../../App.css'
 import './AddCity.css'
 import {handleScriptLoad, loadScript} from "../../../autocompleted/SearchLocationInput";
 import {Circles} from "react-loader-spinner";
+import {getCityWeatherGeolocation} from "../../../store/weather-reducer";
 
 const AddCity = (props) => {
 
@@ -10,7 +11,23 @@ const AddCity = (props) => {
 
     window.onclick = (e) => props.cityNotFound(false)
     const autoCompleteRef = useRef();
+
+
+
+
     useEffect(() => {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            let lat = position.coords.latitude
+            let lon = position.coords.longitude
+              props.getCityWeatherGeolocation(lat, lon)
+            },
+            function (err) {
+                console.log(err)
+            }
+            // {enableHighAccuracy: false,
+            //     timeout:
+            //         5000, maximumAge: 2000}
+        )
         loadScript(
             `https://maps.googleapis.com/maps/api/js?language=en&key=${KEY}=places`,
             () => handleScriptLoad(props.changeCity, autoCompleteRef)
