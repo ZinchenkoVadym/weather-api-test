@@ -8,14 +8,12 @@ import {getCityWeatherGeolocation} from "../../../store/weather-reducer";
 const AddCity = (props) => {
 
     const KEY = 'AIzaSyBp-SEtW27t7ri7nVAcrkns-mPBxSWeWbQ&libraries';
-
     window.onclick = (e) => props.cityNotFound(false)
     const autoCompleteRef = useRef();
 
 
-
-
     useEffect(() => {
+        props.loaderToggleMain(true)
         navigator.geolocation.getCurrentPosition(function(position) {
             let lat = position.coords.latitude
             let lon = position.coords.longitude
@@ -23,10 +21,8 @@ const AddCity = (props) => {
             },
             function (err) {
                 console.log(err)
+                props.loaderToggleMain(false)
             }
-            // {enableHighAccuracy: false,
-            //     timeout:
-            //         5000, maximumAge: 2000}
         )
         loadScript(
             `https://maps.googleapis.com/maps/api/js?language=en&key=${KEY}=places`,
