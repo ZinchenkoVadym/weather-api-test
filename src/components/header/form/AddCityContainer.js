@@ -3,7 +3,8 @@ import AddCity from "./AddCity";
 import {
     changeCity,
     cityNotFound,
-    getCityWeather, getCityWeatherGeolocation, loaderToggleMain,
+    getCityWeather,
+    loaderToggleMain,
 } from "../../../store/weather-reducer";
 import {compose} from 'redux'
 
@@ -16,5 +17,5 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {cityNotFound, getCityWeather, changeCity, getCityWeatherGeolocation, loaderToggleMain})
+    connect(mapStateToProps, {cityNotFound, getCityWeather, changeCity, loaderToggleMain})
 )(AddCity)
