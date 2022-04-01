@@ -5,10 +5,10 @@ import '../../../App.css'
 import {TailSpin} from "react-loader-spinner";
 
 const CurrentWeatherCity = (props) => {
-
     let description = props.weatherData[0].weather[0].description;
     let descriptionData = description[0].toUpperCase() + description.slice(1);
     let iconWeather = `http://openweathermap.org/img/wn/${props.weatherData[0].weather[0].icon}@2x.png`;
+
 
     return (
         <section className='current__weather'>

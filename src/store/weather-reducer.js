@@ -166,7 +166,7 @@ export const getCityWeatherGeolocation = (lat, lon) => {
                 if (result.cod === '404' || result.cod === '400') {throw new Error('message')}
                 dispatch(cityData(result.city))
                 dispatch(weatherData(result.list))
-                dispatch(changeCity(    ''))
+                dispatch(changeCity(''))
                 dispatch(loaderToggleMain(false))
                 dispatch(toggleTemp(false))
             })

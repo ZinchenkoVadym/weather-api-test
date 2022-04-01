@@ -14,6 +14,7 @@ const AddCity = (props) => {
 
     useEffect(() => {
         props.loaderToggleMain(true)
+        console.log(navigator.geolocation)
         navigator.geolocation.getCurrentPosition(function(position) {
             let lat = position.coords.latitude
             let lon = position.coords.longitude
@@ -22,7 +23,8 @@ const AddCity = (props) => {
             function (err) {
                 console.log(err)
                 props.loaderToggleMain(false)
-            }
+            },
+            {maximumAge: 5000, timeout: 4000}
         )
         loadScript(
             `https://maps.googleapis.com/maps/api/js?language=en&key=${KEY}=places`,
@@ -39,7 +41,7 @@ const AddCity = (props) => {
             }}>
                 <input
                     ref={autoCompleteRef}
-                    placeholder='Write city...'
+                    placeholder='City name...'
                     type='text'
                     onChange={(e) => {
                         props.cityNotFound(false)
