@@ -158,7 +158,6 @@ export const getCityWeather = (nameCity) => {
     }
 }
 
-
 export const getFahrenheitTemp = (nameCity) => {
     return (dispatch) => {
         dispatch(loaderToggleFahrenheit(true))

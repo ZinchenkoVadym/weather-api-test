@@ -1,3 +1,5 @@
+import {getCityWeatherGeolocation} from "../store/weather-reducer";
+
 let autoComplete;
 
 export const loadScript = (url, callback) => {
@@ -23,6 +25,7 @@ export const handleScriptLoad = (changeCity, autoCompleteRef) => {
         autoCompleteRef.current,
         { types: ["(cities)"], componentRestrictions: { country: "ua" } }
     );
+    console.log(autoComplete)
     autoComplete.addListener("place_changed", () =>
             handlePlaceSelect(changeCity)
     );
@@ -31,7 +34,8 @@ export const handleScriptLoad = (changeCity, autoCompleteRef) => {
 async function handlePlaceSelect(changeCity) {
     console.log('handlePlaceSelect')
     const addressObject = autoComplete.getPlace();
-    const query = addressObject.formatted_address;
+    console.log(addressObject)
+    const query = addressObject.vicinity;
     changeCity(query);
 }
 

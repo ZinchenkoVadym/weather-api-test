@@ -3,6 +3,7 @@ import './../../../App.css'
 import './AddCity.css'
 import {handleScriptLoad, loadScript} from "../../../autocompleted/SearchLocationInput";
 
+
 const AddCity = (props) => {
 
     const KEY = 'AIzaSyBp-SEtW27t7ri7nVAcrkns-mPBxSWeWbQ&libraries';
@@ -11,6 +12,7 @@ const AddCity = (props) => {
 
 
     useEffect(() => {
+
         loadScript(
             `https://maps.googleapis.com/maps/api/js?language=en&key=${KEY}=places`,
             () => handleScriptLoad(props.changeCity, autoCompleteRef)
