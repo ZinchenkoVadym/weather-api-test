@@ -85,14 +85,6 @@
   .current__weather .current-weather__container .current-weather__block .temperature__block {
     margin-top: 0;
   }
-  .current__weather .current-weather__container .current-weather__block .temperature__block .img {
-    width: 80px;
-    height: 80px;
-  }
-  .current__weather .current-weather__container .current-weather__block .temperature__block .img img {
-    width: 100%;
-    height: 100%;
-  }
   .current__weather .current-weather__container .current-weather__block .temperature__block .temp {
     font-size: 48px;
     margin-left: 0;
