@@ -5,6 +5,7 @@ import {TailSpin} from "react-loader-spinner";
 import React from "react";
 
 const Weather = (props) => {
+
     if(props.loaderMain) {
         return (<div className='loader__main'>
             <TailSpin color='rgba(15,58,83,0.62)' height='300px' width='300px'/>

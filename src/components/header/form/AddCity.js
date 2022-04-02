@@ -6,18 +6,18 @@ import {handleScriptLoad, loadScript} from "../../../autocompleted/SearchLocatio
 
 const AddCity = (props) => {
 
-    const KEY = 'AIzaSyBp-SEtW27t7ri7nVAcrkns-mPBxSWeWbQ&libraries';
+    // const KEY = 'AIzaSyBp-SEtW27t7ri7nVAcrkns-mPBxSWeWbQ&libraries';
     window.onclick = (e) => props.cityNotFound(false)
-    const autoCompleteRef = useRef();
+    // const autoCompleteRef = useRef();
 
 
-    useEffect(() => {
-
-        loadScript(
-            `https://maps.googleapis.com/maps/api/js?language=en&key=${KEY}=places`,
-            () => handleScriptLoad(props.changeCity, autoCompleteRef)
-        )
-    }, []);
+    // useEffect(() => {
+    //
+    //     loadScript(
+    //         `https://maps.googleapis.com/maps/api/js?language=en&key=${KEY}=places`,
+    //         () => handleScriptLoad(props.changeCity, autoCompleteRef)
+    //     )
+    // }, []);
 
     return (
         <div className='form__add-city'>
@@ -27,7 +27,7 @@ const AddCity = (props) => {
                 props.getCityWeather(props.cityName)
             }}>
                 <input
-                    ref={autoCompleteRef}
+                    // ref={autoCompleteRef}
                     placeholder='City name...'
                     type='text'
                     onChange={(e) => {

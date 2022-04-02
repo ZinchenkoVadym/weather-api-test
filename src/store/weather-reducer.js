@@ -9,7 +9,7 @@ const TOGGLE_TEMP = 'TOGGLE_TEMP';
 const TOGGLE_LOADER_FAHRENHEIT = 'TOGGLE_LOADER_FAHRENHEIT';
 const TOGGLE_LOADER_MAIN = 'TOGGLE_LOADER_MAIN';
 
-let InitialState = {
+export const InitialState = {
     cityName: '',
     tempFahrenheit: "",
     cityData: {},
@@ -20,7 +20,7 @@ let InitialState = {
     loaderMain: false,
 }
 
-const weatherReducer = (state = InitialState, action) => {
+const weatherReducer = (state= InitialState, action) => {
     switch (action.type) {
         case CHANGE_CITY: {
             return {

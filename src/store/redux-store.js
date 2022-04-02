@@ -4,13 +4,10 @@ import weatherReducer from "./weather-reducer";
 import timeReducer from "./time-reducer";
 
 
-
 let reducers = combineReducers({
-        weatherReducer,
-        timeReducer,
-    }
-)
-
+    weatherReducer,
+    timeReducer
+})
 let store = createStore(reducers, applyMiddleware(thunk));
 
 export default store;

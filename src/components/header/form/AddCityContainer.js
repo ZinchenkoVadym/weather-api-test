@@ -3,7 +3,7 @@ import AddCity from "./AddCity";
 import {
     changeCity,
     cityNotFound,
-    getCityWeather, getCityWeatherGeolocation,
+    getCityWeather,
     loaderToggleMain,
 } from "../../../store/weather-reducer";
 import {compose} from 'redux'

@@ -38,21 +38,22 @@
   font-size: 72px;
   margin-left: 10px;
 }
-.current__weather .current-weather__container .current-weather__block .temperature__block .celcium {
+.current__weather .current-weather__container .current-weather__block .temperature__block .celsius {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
 }
-.current__weather .current-weather__container .current-weather__block .temperature__block .celcium button {
-  font-size: 28px;
+.current__weather .current-weather__container .current-weather__block .temperature__block .celsius button {
+  font-size: 20px;
   border: none;
   background: none;
   color: rgba(15, 58, 83, 0.62);
   cursor: pointer;
   transition: 0.5s;
 }
-.current__weather .current-weather__container .current-weather__block .temperature__block .celcium .active {
+.current__weather .current-weather__container .current-weather__block .temperature__block .celsius .active {
   font-size: 30px;
+  font-weight: bold;
   transition: 0.5s;
 }
 .current__weather .current-weather__container .current-weather__block .mostly__clear {
@@ -89,10 +90,10 @@
     font-size: 48px;
     margin-left: 0;
   }
-  .current__weather .current-weather__container .current-weather__block .temperature__block .celcium {
+  .current__weather .current-weather__container .current-weather__block .temperature__block .celsius {
     margin-left: 10px;
   }
-  .current__weather .current-weather__container .current-weather__block .temperature__block .celcium button {
+  .current__weather .current-weather__container .current-weather__block .temperature__block .celsius button {
     font-size: 18px;
   }
   .current__weather .current-weather__container .current-weather__block .mostly__clear {
