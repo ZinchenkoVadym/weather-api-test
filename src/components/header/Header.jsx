@@ -1,7 +1,7 @@
 import React from 'react';
-import './../../App.css'
-import './Header.css'
-import AddCityContainer from "./form/AddCityContainer";
+import './../../App.css';
+import './Header.css';
+import AddCityContainer from './form/AddCityContainer';
 
 const Header = () => {
     return (

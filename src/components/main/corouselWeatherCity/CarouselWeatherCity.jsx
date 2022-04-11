@@ -1,10 +1,10 @@
 import React from 'react';
-import '../Main.css'
-import './CarouselWeatherCity.css'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import '../Main.css';
+import './CarouselWeatherCity.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const CarouselWeatherCity = (props) => {
 
@@ -27,7 +27,7 @@ const CarouselWeatherCity = (props) => {
                 }
             }
         ]
-    }
+    };
     const iconWeather = `http://openweathermap.org/img/wn/${props.carouselData[0].weather[0].icon}@2x.png`;
 
     return (
@@ -42,18 +42,12 @@ const CarouselWeatherCity = (props) => {
                             return (
                                 <div className='weather_item' key={e.dt}>
                                      <div className='weather__data'>
-                                        <div className='date'>
-                                            {date[0]}
-                                        </div>
-                                        <div className='time'>
-                                            {time}
-                                        </div>
+                                        <div className='date'>{date[0]}</div>
+                                        <div className='time'>{time}</div>
                                         <div className='img_carousel'>
                                             <img src={iconWeather} alt={'img'}/>
                                         </div>
-                                        <div className='temp'>
-                                            {temp}&deg;c
-                                        </div>
+                                        <div className='temp'>{temp}&deg;c</div>
                                     </div>
                                 </div>
                             )})}
