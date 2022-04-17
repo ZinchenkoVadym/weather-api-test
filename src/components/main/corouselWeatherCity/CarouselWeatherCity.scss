@@ -9,10 +9,12 @@
     width: 150px;
     padding: 10px;
 
+
     .weather__data {
       border: 2px solid rgba(216, 225, 15, 0.38);
       padding: 10px;
       backdrop-filter: blur(30px);
+      border-radius: 5px;
 
       .img_carousel {
         img {

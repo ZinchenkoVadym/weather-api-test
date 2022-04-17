@@ -5,13 +5,16 @@ import {compose} from 'redux';
 import {toggleTemp} from '../../../store/actions';
 
 
-const mapStateToProps = state => ({
-    tempFahrenheit: state.weather.tempFahrenheit,
-    toggleTempBool: state.weather.toggleTempBool,
-    loaderFahrenheit: state.loader.loaderFahrenheit
-})
+const mapStateToProps = (state) => ({
+  tempFahrenheit: state.weather.tempFahrenheit,
+  toggleTempBool: state.weather.toggleTempBool,
+  loaderFahrenheit: state.loader.loaderFahrenheit,
+});
 
 
-export default compose(connect(mapStateToProps, {getFahrenheitTemp, toggleTemp}))(CurrentWeatherCity);
+export default compose(connect(mapStateToProps, {
+  getFahrenheitTemp,
+  toggleTemp,
+}))(CurrentWeatherCity);
 
 

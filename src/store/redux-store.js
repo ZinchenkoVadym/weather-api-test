@@ -4,12 +4,12 @@ import weatherReducer from './weather-reducer';
 import loaderReducer from './loader-reducer';
 
 
-let reducers = combineReducers({
-    weather: weatherReducer,
-    loader: loaderReducer
+const reducers = combineReducers({
+  weather: weatherReducer,
+  loader: loaderReducer,
 });
 
-let store = createStore(reducers, applyMiddleware(thunk));
+const store = createStore(reducers, applyMiddleware(thunk));
 
 export default store;
 
