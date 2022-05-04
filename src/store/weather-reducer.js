@@ -53,7 +53,6 @@ export default weatherReducer;
 
 export const getCityWeather = (nameCity) => {
   return async (dispatch) => {
-    console.log('request');
     dispatch(loaderToggleMain(true));
     weatherApiRequest.getCityWeather(nameCity)
         .then((result) => {
